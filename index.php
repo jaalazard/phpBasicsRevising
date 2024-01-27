@@ -1,29 +1,28 @@
 <?php
 
-/* Exercice 2 : Biodiversity protection
-Biodiversity is in danger.
-    🐱 : 1000000000 individuals
-    🐼 : 1000 individuals
-    🐘 : 150 individuals
-    🦖 : 0 individual
-Create a condition to display the correct threat status according to a species population.
-if the animal population is zero, animal is extinct
-if the animal population is < 200, animal is critically endangered
-if the animal population is < 3000, animal is threatened
-more >= 3000, population is not threatened. */
+/* Exercice 3 : Dangerous animals
+Please find some data about various animals dangerosity
+    🐻 600kg, carnivorous => dangerous
+    🐑 60kg, not carnivorous => not dangerous
+    🐘 1200kg, not carnivorous => dangerous
+    🦔 1kg, carnivorous => not dangerous
+    🐇 3kg, not carnivorous => not dangerous
+    🦖 8000kg, carnivorous => dangerous
+Create a condition to determine if an animal is dangerous or not. The rules are :
+    dangerous if the animal is carnivorous AND weights more than 50kg, OR if it weights more than 1000kg. Display 'Ouch, you should run !'
+    In all other case, display 'It is gentle as a lamb 🐑'
+ */
 
-function getStatus($animalPopulation) {
-if ($animalPopulation === 0) {
-    $status = "extinct";
-} elseif ($animalPopulation > 0 && $animalPopulation < 200) {
-    $status = "critically endangered";
-} elseif ($animalPopulation > 200 && $animalPopulation < 3000) {
-    $status = "threatened";
-} else {
-    $status = "not threatened";
-}
-return $status;
-}
-  
+ function isItDangerous($kilos, $isCarnivorous) {
+    if ($kilos > 50 && $isCarnivorous || $kilos > 1000) {
+        $result = 'Ouch, you should run !';
+    } else {
+        $result = 'It is gentle as a lamb 🐑';
+    }
+    return $result;
+ }
 
-echo getStatus(8000);
+$isCarnivorous = false;
+$weight = 600;
+
+echo isItDangerous($weight, $isCarnivorous);

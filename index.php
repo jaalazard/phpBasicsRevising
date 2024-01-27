@@ -1,20 +1,16 @@
 <?php
 
-$peanutStock = 12 ;
-/* Met à jour le stock 🥜 en utilisant le bon opérateur et affiche-le pour chaque étape.
-    🐘 mange 1 🥜, décrémente ton stock
-    🐷 a très faim, il en mange 8 🥜, décrémente ton stock
-    🐿️ recharge 3 🥜 de son stock d'hiver
-    🐵 te fait une blague, et cache la moitié du reste 🥜, décrémente ton stock.
-    🐘🐷🐿️ sont en colère contre 🐵. Les pauvres 🐵 devraient multiplier le stock par 3 pour se faire pardonner. */
+$king = 'Mufasa';
 
-    $peanutStock--;
-    echo $peanutStock . ' ';
-    $peanutStock+=8;
-    echo $peanutStock . ' ';
-    $peanutStock +=3;
-    echo $peanutStock . ' ';
-    $peanutStock -= $peanutStock /2;
-    echo $peanutStock . ' ';
-    $peanutStock *= 3;
-    echo $peanutStock . ' ';
+
+/* display only the first character of the $king name
+display only the last character of the $king name
+Change the name of the king, it is now 'Simba'.
+display only the second character of the new $king name */
+
+echo $king[0];
+echo "<br>";
+echo $king[-1];
+echo "<br>";
+$king = 'simba';
+echo $king[1];

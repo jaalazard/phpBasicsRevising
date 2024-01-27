@@ -1,24 +1,24 @@
 <?php
 
-/* Exercise 1 : planting trees 🌳
-    Write a loop to plant 3 trees (you should display '🌳🌳🌳').
-    Write a loop to plant 8 🌳 .
-    Write a loop to plant 20 🌳 .
- */
+/* Exercise 2 : planting more trees 🌲🌴
+In previous exercise, you can plant one 🌳 per hour. So in a loop of 8, you plant 8 🌳, easy.
+Now, you have to plant 🌲, they are more delicate and need to dig deeper. You need 2 hours to plant a 🌲.
+    Write a loop to plant 🌲 during a 6 hours working day.
+    Write a loop to plant 🌲 during a 8 hours working day.
+    Write a loop to plant 🌲 during a 9 hours working day.
+You have now experience in tree planting. You work now with very delicate and rare tree 🌴. You need 3 hours of work to plant one 🌴.
+    Write a loop to plant 🌴 during a 6 hours working day.
+    Write a loop to plant 🌴 during a 2 hours working day.
+    Write a loop to plant 🌴 during a 8 hours working day. */
 
- for ($i = 0; $i < 3; $i++){
-    echo '🌳';
- }
- echo '   ';
+$numberOfHours = 6;
+for ($i = 0; $i < floor($numberOfHours / 2); $i++) {
+    echo '🌲';
+}
+echo '   ';
 
- for ($i = 0; $i < 8; $i++){
-    echo '🌳';
- }
-
- echo '   ';
-
- for ($i = 0; $i < 20; $i++){
-    echo '🌳';
- }
-
- echo '   ';
+$numberOfHours = 8;
+for ($i = 0; $i < floor($numberOfHours / 3); $i++) {
+    echo '🌴';
+}
+echo '   ';
